@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>{Title}</title>
+    <meta name="description" content="{MetaDescription}">
+    <!--Depending on the page our title will update given the corresponding tags we've put in place -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width">
+
+    <meta name="text:Google Analytics ID" content="" />
+    <meta name="text:Google Web Font name" content="" />
+    <meta name='text:Disqus Shortname' content="" />
+    <meta name="text:About" content="" />
+    <meta name="text:Facebook" content="" />
+    <meta name="text:Twitter" content="" />
+    <meta name="text:Google Plus" content="" />
+    <meta name="text:Dribbble" content="" />
+    <meta name="text:Instagram" content="" />
+    <meta name="text:Email Address" content="" />
+    <meta name="color:Background Color" content="#FFFFFF" />
+    <meta name="color:Link Color" content="" />
+    <meta name="color:Link Hover Color" content="" />
+    <meta name="font:Body Font" content="" />
+
+    <!-- Making use of custom meta tags in Tumblr allows users to customize settings without needing to edit this source code. This is particularlly useful for theme builders whose users need to customize on their own. There's a lot of different meta tags you can use. Here I've added support for Google Anayltics and Google Web Fonts. From within the Dashbaord/Settings area you can edit these settings directly. -->
+
+    <!--
+         App Icon:
+         Browsers with app icon support can be used here. The is particually useful in Safari when on an iOS device. The icon can be saved as a shortcut to this page. Linking to the icon happens automatically based on your profile photo within Tumblr.
+    -->
+    <link rel="apple-touch-icon" href="{PortraitURL-128}">
+    <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
+
+    <!--
+        Favicon:
+        Much like the app icon. You can supply a custom favicion using the {Favion} variable inside the "href" attrtibute.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+    <!--Custom google webfonts embed. This is customizable from the dashboard area of the theme editor. -->
+    <link href="http://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shiv -->
+    <!--[if lt IE 9]>
+        <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--
+        <link rel="stylesheet" href="your-external-stylesheet-here-if-you-wish" type="text/css" media="all">
+        If you would rather host your stylesheet somewhere else instead of inline like below you can do so by adding an absolute path to the CSS file. Just uncomment the line above and update the "href" attribute.
+    -->
+
+
+<style type="text/css">
+{CustomCSS}
+</style>
+
+    <!-- SVG sprites are a combo of icons that are easily scalable and manipulative with CSS. We will use a sprite to house all our icons inline rather than link directly to images with absolute URLs. This is awesome :) -->
+    <svg id="sprite" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <defs>
+            <symbol id="twitter" viewBox="0 0 20 20">
+                <title>Twitter</title>
+                <path d="M17.316 6.246c.008.162.01.326.01.488 0 4.99-3.796 10.742-10.74 10.742-2.132 0-4.115-.625-5.786-1.697.296.034.596.052.9.052 1.77 0 3.397-.604 4.688-1.615-1.65-.03-3.046-1.12-3.526-2.62.23.042.467.065.71.065.345 0 .68-.045.995-.13C2.84 11.18 1.54 9.657 1.54 7.827V7.78c.508.284 1.09.454 1.71.474-1.014-.678-1.68-1.832-1.68-3.143 0-.69.185-1.34.51-1.897C3.943 5.498 6.726 7 9.863 7.158c-.064-.277-.097-.564-.097-.86 0-2.085 1.69-3.774 3.774-3.774 1.085 0 2.066.457 2.755 1.19.86-.17 1.667-.483 2.397-.915-.282.88-.88 1.62-1.66 2.087.764-.092 1.49-.293 2.168-.594-.506.758-1.146 1.422-1.884 1.953z"
+                />
+            </symbol>
+
+            <symbol id="facebook" viewBox="0 0 20 20">
+                <title>Facebook</title>
+                <path d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h7v-7H8V9.525h2v-2.05c0-2.164 1.212-3.684 3.766-3.684l1.803.003v2.605H14.37c-.994 0-1.372.746-1.372 1.438v1.69h2.568L15 12h-2v7h4c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2z" />
+            </symbol>
+
+            <symbol id="googleplus" viewBox="0 0 20 20">
+                <title>Google Plus</title>
+                <path d="M1.99 5.59c0 1.493.498 2.57 1.48 3.204.807.52 1.74.598 2.227.598.118 0 .213-.006.28-.01 0 0-.155 1.004.59 1.996H6.53c-1.29 0-5.493.27-5.493 3.727 0 3.516 3.86 3.695 4.635 3.695.06 0 .097-.002.097-.002.008 0 .063.002.158.002.497 0 1.782-.062 2.975-.643 1.548-.75 2.333-2.06 2.333-3.885 0-1.764-1.196-2.814-2.07-3.582-.532-.47-.993-.873-.993-1.266 0-.4.337-.7.762-1.082.69-.615 1.34-1.492 1.34-3.15 0-1.457-.19-2.436-1.355-3.057.12-.062.55-.107.763-.137.63-.086 1.554-.184 1.554-.7V1.2h-4.6c-.046.002-4.65.172-4.65 4.39zM9.412 14.6c.088 1.406-1.115 2.443-2.922 2.574-1.834.135-3.344-.69-3.432-2.096-.043-.676.254-1.336.835-1.863.59-.533 1.398-.863 2.278-.928.105-.007.208-.013.31-.013 1.7 0 2.85 1 2.933 2.325zm-1.2-9.976c.45 1.588-.23 3.246-1.317 3.553-.125.034-.253.05-.384.05-.994 0-1.98-1.005-2.345-2.392-.204-.776-.187-1.458.047-2.112.23-.645.643-1.078 1.163-1.225.125-.034.254-.052.385-.052 1.2 0 1.972.498 2.45 2.178zM16 8V5h-2v3h-3v2h3v3h2v-3h3V8h-3z"
+                />
+            </symbol>
+
+            <symbol id="dribbble" viewBox="0 0 20 20">
+                <title>Dribbble</title>
+                <path d="M9.565 7.42C8.207 5.008 6.755 3.04 6.648 2.894 4.458 3.93 2.822 5.948 2.31 8.38c.207.004 3.483.043 7.255-.96zm.978 2.64c.102-.032.206-.063.31-.093-.198-.447-.413-.895-.638-1.336C6.17 9.844 2.287 9.756 2.15 9.75c-.003.085-.007.167-.007.25 0 2.02.763 3.862 2.016 5.253l-.006-.006s2.15-3.814 6.39-5.186zM5.17 16.195v-.004c-.057-.045-.12-.086-.177-.135.106.085.178.14.178.14zM8.12 2.372l-.015.004c.006-.002.014-.002.014-.002v-.002zm7.07 1.732C13.806 2.886 11.99 2.144 10 2.144c-.64 0-1.258.077-1.852.22.12.16 1.595 2.12 2.938 4.584 2.962-1.11 4.08-2.812 4.103-2.844zM10 19.2C4.92 19.2.8 15.08.8 10 .8 4.92 4.92.8 10 .8c5.082 0 9.2 4.12 9.2 9.2 0 5.08-4.118 9.2-9.2 9.2zm1.336-7.914c-4.61 1.607-6.134 4.838-6.165 4.904 1.335 1.04 3.007 1.666 4.83 1.666 1.087 0 2.124-.22 3.066-.62-.116-.69-.573-3.097-1.68-5.968l-.05.018zm.354-3.166c.184.373.358.754.523 1.14.06.134.114.27.17.405 2.713-.342 5.385.238 5.473.256-.02-1.862-.686-3.57-1.787-4.91-.02.022-1.28 1.842-4.38 3.11zm1.17 2.785c1.032 2.836 1.45 5.142 1.53 5.61 1.764-1.19 3.018-3.08 3.367-5.27-.156-.05-2.356-.746-4.896-.34z"
+                />
+            </symbol>
+
+            <symbol id="instagram" viewBox="0 0 20 20">
+                <title>Instagram</title>
+                <path d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zM9.984 15.523c3.06 0 5.538-2.48 5.538-5.54 0-.337-.043-.663-.103-.983H17v7.216c0 .382-.31.69-.693.69H3.693c-.383 0-.693-.308-.693-.69V9h1.55c-.062.32-.105.646-.105.984 0 3.06 2.48 5.54 5.54 5.54zm-3.46-5.54c0-1.91 1.55-3.46 3.46-3.46 1.912 0 3.463 1.55 3.463 3.46s-1.55 3.463-3.462 3.463c-1.913 0-3.462-1.55-3.462-3.462zM16.306 6h-1.615C14.31 6 14 5.688 14 5.308V3.69c0-.38.31-.69.69-.69h1.616c.384 0 .694.31.694.69v1.617c0 .38-.31.693-.693.693z"
+                />
+            </symbol>
+
+            <symbol id="email" viewBox="0 0 20 20">
+                <title>Email</title>
+                <path d="M1.574 5.286l7.5 4.03c.252.134.578.198.906.198.328 0 .654-.064.906-.2l7.5-4.028c.49-.263.95-1.286.054-1.286H1.52c-.896 0-.434 1.023.054 1.286zm17.04 2.203c-.556.288-7.388 3.848-7.728 4.026s-.578.2-.906.2-.566-.022-.906-.2-7.133-3.74-7.688-4.028c-.39-.204-.386.035-.386.22V15c0 .42.566 1 1 1h16c.434 0 1-.58 1-1V7.708s.004-.423-.387-.22z"
+                />
+            </symbol>
+        </defs>
+    </svg>
+
+
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="grid">
+            <header>
+                <a href="/"><img src="images/ann.png" alt="ann anderson portrait" /></a>
+                <h1>Ann Anderson</h1>
+                <p class="description">A designer &amp; photographer from Southern Wyoming</p>
+
+                <div class="social">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <svg class="icon icon-twitter">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="icon icon-facebook">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="icon icon-googleplus">
+                                    <use xlink:href="#googleplus"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="icon icon-dribbble">
+                                    <use xlink:href="#dribbble"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="icon icon-instagram">
+                                    <use xlink:href="#instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="icon icon-email">
+                                    <use xlink:href="#email"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--end .social-->
+
+                <nav class="navigation">
+                    <ul>
+                <!-- Navigation:
+                This unordered list acts as our main navigation. The page names are generated dynamically. These are created inside the theme editor  and are very easy to add, edit, or delete. Keeping this dynamic makes updates a breeze in terms of different pages. Custom pages can be  created and added to the mix. I'll discuss this further later in the text. -->
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Archive</a></li>
+                        <li><a href="#">Ask</a></li>
+
+                    </ul>
+                </nav>
+
+            <!-- Serach:
+            Searching is relatively easy within tumblr. We just need to direct a form's action to "/search" and tumblr will take care of the rest. Later in the code we can declare a block called "{block:SearchPage}{/block:SearchPage}" that will/can contain a different layout or content if we so desire. -->
+
+                <form class="search" action="/search" method="get">
+                    <input type="text" name="q" value="" placeholder="Search" />
+                    <input type="submit" value="{lang:Search}" />
+                </form>
+
+                <div class="about-me">
+                    <h3>About Me</h3>
+                    <p>I’m a designer and photographer living near the southern tip of Wyoming. I’m currently available for projects for the rest of the month.</p>
+                    <a href="#" class="about-me-button">Send Inquiry</a>
+                </div>
+            </header>
+
+            <!-- The next section begins our post types. This is the bread and butter of any tumlbr theme. When a user posts new content they pick from a set of post types all of which are defined below. Each post type has a corresponding "Block" that when generate outputs in the specific way you have defined it in your theme. There are a massive amount of variables and subblocks to add to each Post type. You can pick and choose or use them all if you wish. I won't be covering absolutely every variable and block type with this theme simply because I don't think a good tumblr site really requires each. I will be showing you the most common variables and post types I like to use. Upon viewing how I work, you can then decide how to make your own theme tailored to yourself or your users. -->
+            <section class="content">
+                <article class="posts {TagsAsClasses}">
+                    <div class="grid-sizer"></div>
+                    <!--
+                    {block:TagPage}<div class="tag-heading"><h2>{Tag}</h2></div>{/block:TagPage}
+                    {block:IndexPage}
+                    {block:Posts} -->
+
+                    <!-- Panorama Block Starts -->
+                    <!-- {block:Panorama} -->
+                    <div class="post panorama grid-item grid-item--panorama-w grid-item--panorama-h">
+                        <img src="http://placekitten.com/g/850/324" alt="{PhotoAlt}" />
+                        <div class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                    <!-- {/block:Panorama} -->
+                    <!-- Panorama Block Ends -->
+
+                    <!-- Text Block Starts -->
+                    <!-- {block:Text} -->
+                    <div class="post text grid-item">
+                        <!-- {block:Title} -->
+                        <h3><a href="#">The title of the text post would look like this</a></h3>
+                        <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee church-key roof party. Leggings ethical McSweeney's, normcore you <a href="#">probably haven't heard of them</a>                            Marfa organic squid. Slow-carb 90's ennui Godard pug asymmetrical, narwhal VHS Tonx High Life. </p>
+                    </div>
+                    <!-- {/block:Text} -->
+                    <!-- Text Block Ends -->
+
+                    <!-- Photo Block Stars -->
+                    <!-- {block:Photo} -->
+                    <div class="post photo grid-item">
+                        <a href="#"><img src="http://placekitten.com/g/270/184" alt="{PhotoAlt}" /></a>
+                        <div class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    </div>
+                    <!-- {/block:Photo} -->
+                    <!-- Photo Block Ends -->
+                    <!-- Photoset Block Starts-->
+                    <!-- {block:Photoset} -->
+                    <div class="post photoset grid-item">
+                        <a href="#"><img class="photoset-photo" src="http://placekitten.com/g/270/184" alt="{PhotoAlt}" /></a>
+                        <a href="#"><img class="photoset-photo" src="http://placekitten.com/g/270/184" alt="{PhotoAlt}" /></a>
+                        <a href="#"><img class="photoset-photo" src="http://placekitten.com/g/270/184" alt="{PhotoAlt}" /></a>
+                        <a href="#"><img class="photoset-photo" src="http://placekitten.com/g/270/184" alt="{PhotoAlt}" /></a>
+
+                        <div class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+
+                    </div>
+                    <!-- {/block:Photoset} -->
+                    <!-- Photoset Block Ends-->
+
+                    <!-- Quote Block Starts-->
+                    <!-- {block:Quote} -->
+                    <div class="post quote grid-item">
+                        &#8220;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.&#8221;
+                        <div class="source">Source Name</div>
+
+                    </div>
+                    <!-- {/block:Quote} -->
+                    <!-- Quote Block Ends-->
+
+                    <!-- Link Block Starts-->
+                    <!-- {block:Link} -->
+                    <div class="post link grid-item">
+                        <a href="#" {Target}>My fancy link</a>
+                        <div class="description">This is a link description. Holy cow its coool</div>
+                    </div>
+                    <!-- {/block:Link} -->
+                    <!-- Link Block Ends-->
+
+                    <!-- Chat Block Starts-->
+                    <!-- {block:Chat} -->
+                    <div class="post chat grid-item">
+
+                        <h3><a href="{Permalink}">My Chat Title</a></h3>
+                        <ul class="chat">
+                            <li class="{Alt} user_{UserNumber}">
+                                <span class="label">Andy:</span>This is what Andy said
+                            </li>
+                            <li class="{Alt} user_{UserNumber}">
+                                <span class="label">Reese:</span>This is what Reese said
+                            </li>
+                            <li class="{Alt} user_{UserNumber}">
+                                <span class="label">Andy:</span>This is what Andy said again
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- {/block:Chat} -->
+                    <!-- Chat Block Ends-->
+
+
+                    <!-- Video Block Starts-->
+                    <!-- {block:Video} -->
+                    <div class="post video grid-item">
+                        <iframe width="270" height="184" src="https://www.youtube.com/embed/HANCzu70us4" frameborder="0" allowfullscreen></iframe>
+                        <div class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, nulla ipsam doloremque deleniti ab, ipsum aut facere rerum error delectus impedit officiis, eligendi, voluptas quam animi culpa voluptatum fuga consequatur.</div>
+                    </div>
+                    <!-- {/block:Video} -->
+                    <!-- Video Block Ends-->
+
+                    <!-- Audio Block Starts-->
+                    <!-- {block:Audio} -->
+                    <div class="post audio grid-item">
+                        <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/151853890&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                        <div class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>
+                    </div>
+                    <!-- {/block:Audio} -->
+                    <!-- Audio Block Ends-->
+
+
+                    <!-- Answer Block Starts-->
+                    <!-- {block:Answer} -->
+                    <div class="answer grid-item">
+                        <div class="asker">
+                            <div class="asker-thumb"><img src="http://placekitten.com/g/40/40"></div>
+                            <div class="asker-name">Lemmy</div>
+                        </div>
+                        <div>
+                            <div class="question">What color is the sky?</div>
+                        </div>
+                        <div class="answerer">
+                            <div class="answerer-thumb"><img src="http://placekitten.com/g/40/40"></div>
+                            <div class="answerer-name">Julie</div>
+                        </div>
+                        <div>
+                            <div class="answer-text">Blue</div>
+                        </div>
+                        <div class="replies">
+                            Replies
+                        </div>
+                    </div>
+                      <!-- {/block:Answer} -->
+                     <!-- Answer Block Ends-->
+
+                     <!-- {/block:Posts} -->
+                    <!--{/block:IndexPage}-->
+                  <!-- end of the Posts Block -->
+                </article>
+                <!--end of article-->
+
+                <!--{block:PermalinkPage}-->
+                <div class="permalink">
+
+                <!-- All posts can be tagged. Tags can be displayed anywhere in your theme but are commonly found on the permalink page. Each tag can be linked to a specific Tag Page(more on this to come). The tag page lists any posts that have been tagged in the same fashion. Tagging works as a keyword filter which organizes posts based on a common taxonomy. If you've ever witnessed a related posts section on any blog, you can thank tagging for this. -->
+                    <h1>Lorem ipsum dolor sit amet</h1> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    <ul class="tags">
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Photography</a></li>
+                    </ul>
+
+                    <ul class="like-and-reblog">
+                        <li class="reblog"><a href="#">Reblog</a></li>
+                        <li class="like"><a href="#">Like</a></li>
+                    </ul>
+
+                    <ul class="pagination">
+                        <li class="prev"><a href="{PreviousPost}">Previous Post</a></li>
+                        <li class="next"><a href="{NextPost}">Next Post</a></li>
+                    </ul>
+
+                    <div class="comments">
+                        <!-- Embed comment widget here if required to appear on permalink page. Disqus or Facebook are good options. -->
+                        {block:IfDisqusShortname}
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                            var disqus_shortname = '{text:Disqus Shortname}'; // Required - Enter shortname in Tumblr Theme Options
+                            var disqus_url = '{Permalink}';
+
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                var dsq = document.createElement('script');
+                                dsq.type = 'text/javascript';
+                                dsq.async = true;
+                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a> {/block:IfDisqusShortname}
+                    </div>
+
+                 <!-- Post Notes:
+                 Post notes are Tumblr's own social integration. Users can like a post similar to other platforms like Facebook and now Twitter. The number of likes can be displayed on the permalink page as a list as seen below. -->
+
+                    <div class="notes">
+                        Post notes
+                    </div>
+                    <!-- end of the Permalink Page -->
+                </div>
+                <!--.permalink-->
+            </section>
+        </div>
+        <!--end .grid-->
+    </div>
+    <!--end .wrap-->
+
+    <!-- Google Analytics are a common request from anyone interested in seeing who is looking at their site. Early in the markup I defined a custom meta tag which allows any user to input their Google Analytics ID from within the theme editor rather than touching the code directly. Below you'll see the Tumblr Variable and block that supports both. -->
+    <!-- {block:IfGoogleAnalyticsID}
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', '{text:Google Analytics ID}', 'auto');
+          ga('send', 'pageview');
+        </script>
+    {/block:IfGoogleAnalyticsID} -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.0/masonry.pkgd.min.js"></script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+
+    <script>
+        var $grid = $('.content .posts').imagesLoaded(function() {
+            $grid.masonry({
+                itemSelector: '.grid-item',
+                percentPosition: true,
+                columnWidth: '.grid-sizer'
+            });
+        });
+    </script>
+
+</body>
+
+</html>

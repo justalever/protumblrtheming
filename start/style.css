@@ -1,0 +1,483 @@
+/****************************************
+** Reset
+*****************************************/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/****************************************
+** Basics
+*****************************************/
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+body {
+    line-height: 1.4;
+    background: white;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    /*  The meta tag we wrote earlier for Google Web Fonts allows you to dynamically add the font name anywhere in the document. Using the text variable above allows all of this to work dynamically. */
+    font-size: 1em;
+    /* ~16px */
+}
+.wrap {
+    padding: 60px 20px;
+    height: 100%;
+    border: 16px solid #81D0FF;
+    overflow: auto;
+}
+.grid {
+    width: 100%;
+    margin: 0 auto;
+}
+.grid:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+ol, ul {
+    list-style: none;
+}
+a {
+    color: #81D0FF;
+    text-decoration: none;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+a:hover {
+    color: #52A1D1;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Basic image/video/media handling */
+
+img, video, object, embed {
+    max-width: 100%;
+    height: auto !important;
+}
+
+/****************************************
+** Typography
+*****************************************/
+
+h1, .h1 {
+    font-size: 36px;
+}
+h2, .h2 {
+    font-size: 30px;
+}
+h3, .h3 {
+    font-size: 24px;
+}
+h4, .h4 {
+    font-size: 18px;
+}
+h5, .h5 {
+    font-size: 14px;
+}
+h6, .h6 {
+    font-size: 12px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+
+/****************************************
+** Globals
+*****************************************/
+
+#sprite {
+    display: none;
+}
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+/****************************************
+** Header
+*****************************************/
+
+header {
+    width: 33.3%;
+    float: left;
+}
+header ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+header .description {
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    line-height: 32px;
+    color: #666666;
+    margin: .3em 0 .7em 0;
+
+}
+header .social {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: .5em;
+}
+header .social .icon {
+    -webkit-transition: fill .3s ease-in-out;
+    -moz-transition: fill .3s ease-in-out;
+    -o-transition: fill .3s ease-in-out;
+    transition: fill .3s ease-in-out;
+}
+header .social .icon:hover {
+    fill: #81D0FF;
+}
+header .navigation {
+    margin: 1.5em 0;
+}
+header .navigation li a {
+    background-color: #333333;
+    border-radius: 3px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    padding: 6px 10px;
+}
+header .navigation li a:hover {
+    background-color: #81D0FF;
+}
+header .search input[type="text"] {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    padding: 6px;
+    width: 96%;
+    font-size: 14px;
+}
+header .search input[type="text"]:focus {
+    outline: none;
+    border-color: #81D0FF;
+}
+header .search input[type="submit"] {
+    display: none;
+}
+header .about-me {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #ccc;
+}
+header .about-me .about-me-button {
+   background-color: #333333;
+   border-radius: 3px;
+   color: white;
+   display:inline-block;
+   font-family: 'Oswald', sans-serif;
+   font-weight: 400;
+   margin: .6em 0;
+   padding: 6px 10px;
+}
+header .about-me .about-me-button:hover {
+   background-color: {color:Link Hover Color};
+}
+
+
+/****************************************
+** Content
+*****************************************/
+
+.content {
+    width: 66.6%;
+    float: left;
+}
+.content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.posts {
+    padding-left: 30px;
+}
+.posts:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.grid-sizer, .grid-item {
+    width: 270px;
+    margin: 20px 0 20px 20px;
+}
+.grid-item {
+    float: left;
+}
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}
+.posts .grid-item--panorama-w {
+    width: 850px;
+}
+.posts .grid-item--panorama-h {
+    height: 324px;
+    margin-bottom: 40px;
+}
+
+/*.posts .post-wide {
+  width: 90%;
+}*/
+
+
+/****************************************
+** Text
+*****************************************/
+
+.text {
+    color: #777777;
+    background: #F7F7F7;
+    padding: 1em;
+}
+.text h3 {
+    margin-bottom: 10px;
+}
+.text h3 a {
+    color: #333333;
+    text-decoration: none;
+}
+.text h3 a:hover {
+    color: #81D0FF;
+}
+.text a {
+    color: #777777;
+    text-decoration: underline;
+}
+.text a:hover {
+    color: #81D0FF;
+}
+
+/****************************************
+** Quote
+*****************************************/
+
+.quote {
+    background: #f7f7f7;
+    padding: 1em;
+    color: #777777;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 28px;
+}
+.quote .source {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    font-style: normal;
+    color: #333333;
+    margin-top: 10px;
+}
+
+/****************************************
+** Link
+*****************************************/
+
+.link {
+    border: 1px solid #dddddd;
+    padding: 1em;
+}
+.link a {
+    font-size: 18px;
+    color: #777777;
+    text-decoration: underline;
+}
+.link a:hover {
+    color: #81D0FF;
+}
+
+/****************************************
+** Photosets
+*****************************************/
+
+.photoset .photoset-photo, .photoset img {
+    max-width: 50%;
+    display: block;
+    float: left;
+}
+.photoset .caption {
+    clear: both;
+}
+
+/****************************************
+** Chat
+*****************************************/
+
+.chat {
+    color: #777777;
+    background: #F7F7F7;
+    padding: 1em;
+}
+.chat h3 {
+    margin-bottom: 10px;
+}
+.chat h3 a {
+    color: #333333;
+    text-decoration: none;
+}
+.chat h3 a:hover {
+    color: #81D0FF;
+}
+.chat a {
+    color: #777777;
+    text-decoration: underline;
+}
+.chat a:hover {
+    color: #81D0FF;
+}
+.chat ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.chat li {
+    padding: 5px 0;
+}
+.chat li .label {
+    color: #333333;
+    font-family: monospace;
+    font-size: 17px;
+    display: block;
+}
+
+/****************************************
+** Answer
+*****************************************/
+
+.answer {
+    border: 1px solid #dddddd;
+    padding: 1em;
+}
+.answer .asker .asker-thumb {
+    float: left;
+    width: 40px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.answer .asker .asker-name {
+    position: relative;
+    top: 6px;
+}
+.answer .question {
+    clear: both;
+    font-weight: bold;
+}
+.answer .question-answer {}
+
+/****************************************
+** Permalink Page
+*****************************************/
+
+.permalink {
+    padding-left: 30px;
+}
+.permalink .pagination, .permalink .comments, .permalink .tags {
+    margin: 20px 0;
+}
+.permalink .tags li, .permalink .like-and-reblog li, .permalink .pagination li {
+    display: inline-block;
+    padding-right: 5px;
+}
+.permalink .tags li a {
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 3px;
+    font-family: 'Oswald', sans-serif;
+    background: #81D0FF;
+    color: white;
+}
+.permalink .tags li a:hover {
+    background: #52A1D1;
+    color: white;
+}
+.permalink .like-and-reblog {
+    margin: 20px 0;
+}
+.permalink .pagination .next {
+    float: right;
+}
+
+/****************************************
+** Tablet
+*****************************************/
+
+@media screen and (max-width: 768px) {
+    body {
+        position: static;
+    }
+    .wrap {
+        padding: 20px;
+    }
+    header {
+        width: 100%;
+        float: none;
+        padding: 0;
+    }
+    .content {
+        width: 100%;
+        float: none;
+        margin: 0;
+        padding: 0;
+    }
+    .posts {
+        padding: 0;
+        margin: 1.5em 0 0 0;
+    }
+    .permalink {
+        padding: 0;
+    }
+    .panorama img {
+        max-width: 100%;
+    }
+}
